@@ -1,0 +1,22 @@
+{
+  "name": "react-workshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "backpack",
+    "build": "backpack build",
+    "serve": "npm run build && node build/main.js"
+  },
+  "dependencies": {
+    "express": "^4.15.0",
+    "next": "v2.0.0-beta.36",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "through2": "^2.0.3",
+    "vinyl-fs": "^2.4.4"
+  },
+  "devDependencies": {
+    "backpack-core": "^0.2.0"
+  }
+}
