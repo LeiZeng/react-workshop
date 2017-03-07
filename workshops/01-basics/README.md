@@ -112,6 +112,7 @@ const tom = {
 layout: false
 
 # JSX
+## - Javascript Syntax for XML
 ```js
 class MyComponent extends React.Component {
   getHeader() {
@@ -127,6 +128,11 @@ class: middle center
 
 # Questions for ES6 and JSX ?
 
+https://github.com/LeiZeng/react-workshop
+
+`cd workshops/01-basics && yarn && yarn start`
+???
+virtual DOM + Hyperscript vs React
 ---
 # OOP ? FP
 
@@ -190,6 +196,9 @@ Toggle.displayName = 'Radio'
 Toggle.propTypes = { ... }
 
 ```
+???
+FP
+Performance
 ---
 # Practice for Basics
 1. A Text input component pass all the passible events to DOM
@@ -287,7 +296,7 @@ class Text extends Component {
 ---
 layout: false
 
-# Practice for State vs props
+# Practice for State vs Props
 1. Create a DropDown component:
  - Show a clickable button
  - When clicked, show a dropdown
@@ -398,30 +407,30 @@ layout: false
 
 1. Create Flow component as in UML Graph
 
-```js
-import Flow from './Flow'
+  ```js
+  import Flow from './Flow'
 
-const FisrtFlow = <Flow condition={true} yes={'yes'} no={'no'}/>
+  const FirstFlow = <Flow condition={true} yes={'yes'} no={'no'}/>
 
-const FisrtFlow = <Flow condition={true} otherwise={'no'}>{'yes'}</Flow>
+  const FirstFlow = <Flow condition={true} otherwise={'no'}>{'yes'}</Flow>
 
-```
+  ```
 
 2. Implement following Appointment UML Graph with Flow and basic types
 
-```ruby
- [Appointment]
-      |
-  <Is a Human>--------No-------> [You'r not a Human!]                           
-      |                                   |
-     Yes                                  |
-      |                                   |
-  <Is Booked?>--No-> [Back to Book it.]   |
-      |                            \      |
-     Yes                            \     |
-      |                              \    |
-  [Conference]                       [Reject]
-```
+  ```ruby
+   [Appointment]
+        |
+    <Is a Human>--------No-------> [You'r not a Human!]                           
+        |                                   |
+       Yes                                  |
+        |                                   |
+    <Is Booked?>--No-> [Back to Book it.]   |
+        |                            \      |
+       Yes                            \     |
+        |                              \    |
+    [Conference]                       [Reject]
+  ```
 
 ---
 layout: true
@@ -572,13 +581,18 @@ class: center middle
 # Thinking in React
 https://facebook.github.io/react/docs/thinking-in-react.html
 ---
-class: center middle
-
----
+class: center
 
 # Homework
 
-- Implement a TodoMVC
-  - Pure React
-  - No style required
-  - State allowed
+## Implement a TodoMVC
+.left[
+- No style required
+- State allowed
+]
+
+.left[
+- No DOM operation
+- Pure React
+- Time count down from first line
+]
