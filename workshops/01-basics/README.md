@@ -480,12 +480,12 @@ const Select = ({options, ...others}) => (
 simple input vs complex select
 ---
 
-## DOM or Props/State
+## DOM Operation
 
 ```js
 class Input extends Component {
   _onChange(event) {
-    console.log(this.refs.input, this.props);
+    console.log(findDOM(this.refs.input), this.props);
   }
   render() {
     return (
@@ -496,7 +496,7 @@ class Input extends Component {
 ```
 ---
 
-## DOM or Props/State
+## DOM without Operation
 
 
 ```js
@@ -523,12 +523,62 @@ const Input = props => (
 )
 ```
 ---
+
+## Event Driven Operation
+
+```js
+const Input = props => (
+  <input
+    type="text"
+    {...props}
+    onChange={event => {
+      props.onChange && props.onChange(event.target.value)
+    }}
+  />
+)
+const Text = props => <Input onChange={value => console.log(value)} />
+```
+---
+
 layout: false
+# Practice for Form
+## Create a Form with following requirements:
+1. Email validation(required and with @)
+2. Hide child gander and show while has child
+3. Capture submit action and add onSubmit event
+
+```html
+<form action="post">
+  <label>User Name<input type="text" name="username" /></label>
+  <label>Email<input type="text" name="email" /></label>
+  <fieldset>
+    <label>
+      I have a child:<input type="radio" name="have_child" value="yes"/>
+    </label>
+    <label>
+      I don't have a child:<input type="radio" name="have_child" value="no" />
+    </label>
+  </fieldset>
+  <select name="gander_of_child">
+    <option value="boy">boy</option>
+    <option value="girl">girl</option>
+  </select>
+  <input type="submit" value="submit"/>
+</form>
+```
+---
 class: center middle
 
 # Thinking in React
+https://facebook.github.io/react/docs/thinking-in-react.html
+---
+class: center middle
 
 ---
-layout: false
-class: center middle
-# Thanks
+
+# Homework
+
+- Implement a TodoMVC
+  - Pure React
+  - No style required
+  - State allowed
