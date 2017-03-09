@@ -331,7 +331,7 @@ layout: true
 
 - DOM based operation
 - Context first
-- DOM as single source of truce *
+- DOM as single source of truth *
 
 ```html
 <script type="text/javascript">
@@ -349,7 +349,7 @@ layout: true
 
 - jQuery object based operation
 - jQuery as namespace
-- DOM as single source of truce *
+- DOM as single source of truth *
 
 ```html
 <input type="text" id="input" value="">
@@ -366,7 +366,7 @@ layout: true
 
 - Component based operation
 - Modules/Packages
-- Props data as single source of truce
+- Props data as single source of truth
 
 ```js
 (props) => (
