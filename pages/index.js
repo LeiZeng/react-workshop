@@ -20,7 +20,7 @@ export default class extends React.Component {
   }
   render () {
     return <div>
-      <h1>Reac Workshop</h1>
+      <h1>React Workshop</h1>
       {this.getSlideItem()}
     </div>
   }
