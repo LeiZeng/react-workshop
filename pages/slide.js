@@ -36,6 +36,9 @@ export default class extends React.Component {
             color: rgb(249, 38, 114);
             text-decoration: none;
           }
+          .center > p > img {
+            width: 100%;
+          }
           code {
             background: #e7e8e2;
             border-radius: 5px;
