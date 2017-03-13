@@ -1,6 +1,9 @@
-class: middle center
 
+class: middle center
 # Redux
+---
+class: middle center
+# Homework Review
 ---
 layout: true
 # Application with Data
@@ -48,11 +51,19 @@ layout: true
 ---
 
 ```
- State -----> Application
-      ︿        /
-       \       /
-        \     ﹀
-          User
+  data => <Application {...data} />
+
+              ||
+              ﹀
+  (data <=> <Application />) <=> User
+  
+              ||
+              ﹀
+   State ----->  View(Component)
+        ︿        /
+         \       /
+          \     ﹀
+            User
 ```
 ---
 layout: false
