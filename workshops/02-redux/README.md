@@ -56,7 +56,7 @@ layout: true
               ||
               ﹀
   (data <=> <Application />) <=> User
-  
+
               ||
               ﹀
    State ----->  View(Component)
@@ -225,6 +225,7 @@ layout: true
 # Practice
 - Create Async action with thunk
   - A component will trigger an action every 2 seconds from componentDidMount
+  - This action will dispatch another increment action after 2 seconds
 - Create a simple logger redux middleware
   - `console.log` every action with action type
 ---
