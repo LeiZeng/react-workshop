@@ -1,0 +1,34 @@
+{
+  "name": "Advanced",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava ./test -t",
+    "ava": "ava",
+    "cover": "nyc ava ./test -t",
+    "start": "next dev"
+  },
+  "dependencies": {
+    "fetch-mock": "^5.9.4",
+    "next": "^2.0.0-beta",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-register": "^6.24.0",
+    "nyc": "^10.1.2"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "next/babel",
+      "@ava/stage-4"
+    ]
+  }
+}
