@@ -322,6 +322,19 @@ test('calls componentDidMount', t => {
 ```
 ---
 
+## Shallow
+- Faster
+
+## DOM
+- More context of DOM and Event System
+
+## Can't or No
+- Can't work with CSS rules
+- No Browser behavior
+- No window/document unless defined
+
+---
+
 ## Component with Redux store
 ```js
 import { Provider, connect } from 'react-redux'
