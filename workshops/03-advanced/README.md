@@ -269,9 +269,8 @@ test(t => {
 test(t => {
   const getStub = sinon.stub()
   getStub.withArgs('key').returns('value')
-  const localStorage = sinon.stub({ get: getStub });
-  const store = new Store(localStorage)
-  t.is(store.get(key), 'value')
+  const localStorage = { get: getStub };
+  t.is(localStorage.get('key'), 'value')
 })
 ```
 ---
@@ -326,12 +325,12 @@ test('calls componentDidMount', t => {
 - Faster
 
 ## DOM
-- More context of DOM and Event System
+- More context of DOM or Event System, depends
 
-## Can't or No
+## JSDOM
 - Can't work with CSS rules
 - No Browser behavior
-- No window/document unless defined
+- No real window/document
 
 ---
 
